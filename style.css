@@ -6,8 +6,9 @@
 /* ===============NAV MENU============== */
 
 .navbar {
-  background: url(./assets/SitemapIndexed2.png);
-  background-position: center;
+  background: url(./assets/gameBackgroundHeader.png);
+  background-size: cover;
+  background-position: top;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,11 +16,12 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 16px 32px;
+  padding: 14px 300px;
 }
 
 .navbar a {
   color: white;
+  padding-right: 20px;
 }
 
 a:hover {
@@ -37,11 +39,38 @@ a:hover {
 .name {
   font-size: 40px;
   color: white;
+  text-align: center;
   justify-content: center;
   text-decoration: none;
 }
 
 /* =============================================== */
+
+html,
+body {
+  background: url(./assets/gameBackground.png);
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 90vmin;
+  height: 90vmin;
+  border: 2px solid black;
+}
+
+#board div {
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -63,30 +92,6 @@ body {
 
 #board div {
   border: 1px solid #ccc;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-}
-
-#board {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    width: 90vmin;
-    height: 90vmin;
-    border: 2px solid black;
-}
-
-#board div {
-    border: 1px solid #ccc;
 }
 
 /* Color all squares as grass (light green) */
@@ -108,16 +113,18 @@ html, body {
 #board div:nth-child(68) {
   background-color: lightblue;
 }
-    background-color: lightgreen;
-}
 
 /* Color a few squares as lake (light blue) */
-#board div:nth-child(33), #board div:nth-child(34), 
-#board div:nth-child(43), #board div:nth-child(44) {
-    background-color: lightblue;
+#board div:nth-child(33),
+#board div:nth-child(34),
+#board div:nth-child(43),
+#board div:nth-child(44) {
+  background-color: lightblue;
 }
 
-#board div:nth-child(57), #board div:nth-child(58),
-#board div:nth-child(67), #board div:nth-child(68) {
-    background-color: lightblue;
+#board div:nth-child(57),
+#board div:nth-child(58),
+#board div:nth-child(67),
+#board div:nth-child(68) {
+  background-color: lightblue;
 }
