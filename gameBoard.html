@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stratego Landing Page</title>
-    <link rel="stylesheet" href="./landingPage.css" />
-  </head>
-  <body class="landingPageBody">
-    <h1 class="landingPage">Stratego</h1>
-    <button class="landingPageButton">
-      <a href="./gameBoard.html">Start Game</a>
-    </button>
     <title>Stratego</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="gameScripts.js" defer></script>
   </head>
   <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="name">Stratego</h1>
+        <ul class="nav-list">
+          <li><a href="./pages/howToPlay.html">How to play</a></li>
+          <li><a href="./pages/Rules.html">Rules</a></li>
+          <li><a href="./pages/gameOver.html">Game over</a></li>
+        </ul>
+      </nav>
+    </header>
     <div id="board">
       <div class="square grass"></div>
       <div class="square grass"></div>
