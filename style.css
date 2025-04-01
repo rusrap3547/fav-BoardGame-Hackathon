@@ -15,11 +15,12 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 16px 32px;
+  padding: 14px 300px;
 }
 
 .navbar a {
   color: white;
+  padding-right: 20px;
 }
 
 a:hover {
@@ -37,6 +38,7 @@ a:hover {
 .name {
   font-size: 40px;
   color: white;
+  text-align: center;
   justify-content: center;
   text-decoration: none;
 }
