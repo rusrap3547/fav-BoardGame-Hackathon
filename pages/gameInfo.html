@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stratego Game Rules</title>
+    <link rel="stylesheet" href="../gameInfo.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="name">Stratego</h1>
+        <ul class="nav-list">
+          <li><a href="../">Home</a></li>
+          <li><a href="../gameBoard.html">Game Board</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>🎯 Game Overview – Stratego: Solo Conquest</h1>
+    <p>
+      Stratego: Solo Conquest is a one-player strategy game where you face off
+      against a computer-controlled opponent (AI) on a battlefield of hidden
+      identities and tactical deception.
+    </p>
+
+    <hr />
+
+    <h1>🧑‍🚀 Objective</h1>
+    <p>
+      Capture the enemy AI’s Flag or leave the AI with no valid moves remaining.
+    </p>
+
+    <hr />
+
+    <h1>🧩 Game Setup</h1>
+    <li>Players: 1 Human vs AI</li>
+    <li>Pieces: 80 total pieces</li>
+    <li>40 Blue (Human Player)</li>
+    <li>40 Red (AI Opponent)</li>
+    <h3>Each side includes:</h3>
+    <li>1 Marshal (10)</li>
+    <li>1 General (9)</li>
+    <li>2 Colonels (8)</li>
+    <li>3 Majors (7)</li>
+    <li>4 Captains (6)</li>
+    <li>4 Lieutenants (5)</li>
+    <li>4 Sergeants (4)</li>
+    <li>5 Bomb Defusers (3)</li>
+    <li>8 Soldiers (2)</li>
+    <li>1 Spy (1)</li>
+    <li>6 Bombs (Immovable)</li>
+    <li>1 Flag (Immovable)</li>
+
+    <hr />
+
+    <h1>🧭 Board Layout</h1>
+    <p>Board Size: 10 x 10 (100 tiles)</p>
+    <p>
+      Obstacles: 2 central lakes (each 2x2 tiles) – cannot be entered or crossed
+    </p>
+    <h3>Initial Setup:</h3>
+    <p>
+      You (the player) place your 40 pieces freely on your back 4 rows. The AI
+      will auto-generate a randomized strategic formation on its side.
+    </p>
+
+    <hr />
+
+    <h1>🕹 Gameplay & Turns</h1>
+    <p>The game is turn-based: You and the AI alternate turns.</p>
+    <p>On your turn, you can either move or attack with one piece.</p>
+
+    <hr />
+
+    <h1>🧍 Movement Rules</h1>
+    <p>Most pieces move 1 tile per turn – vertically or horizontally.</p>
+    <p>No diagonal moves.</p>
+    <p>Cannot jump over or move through other pieces.</p>
+    <p>Cannot enter lake tiles.</p>
+    <p>
+      You may not move the same piece more than 5 consecutive times without
+      pausing or changing direction.
+    </p>
+    <h3>Special Rule – Soldier (2):</h3>
+    <p>• Soldiers can move any number of unblocked tiles in a straight line.</p>
+    <p>• They can move and attack in the same turn.</p>
+
+    <hr />
+
+    <h1>⚔️ Combat Rules</h1>
+    <p>
+      If one of your pieces is adjacent (vertically/horizontally) to an enemy
+      piece, you can choose to attack.
+    </p>
+    <p>When attacking, the lower-ranked piece is removed.</p>
+    <p>If both pieces have the same value, both are eliminated.</p>
+    <p>If the attacker wins, they move into the defender’s space.</p>
+    <p>If the defender wins, they stay in place.</p>
+    <p>
+      Combat is optional. You may choose not to attack even if you're in range.
+    </p>
+
+    <hr />
+
+    <h1>💣 Special Combat Rules</h1>
+    <p>
+      Bombs: Immovable and deadly. Any piece attacking a Bomb is destroyed,
+      except for the Defuser (3), who disarms and captures it.
+    </p>
+    <p>Marshal (10) vs. Spy (1):</p>
+    <p>• The Spy can defeat the Marshal only if attacking.</p>
+    <p>• If the Marshal attacks first, the Spy loses.</p>
+
+    <hr />
+
+    <h1>🏁 Victory Conditions</h1>
+    <h3>You win if:</h3>
+    <p>• You capture the AI’s Flag</p>
+    <p>• The AI runs out of movable pieces</p>
+    <h3>You lose if:</h3>
+    <p>• The AI captures your Flag</p>
+    <p>• You run out of movable pieces</p>
+  </body>
+</html>

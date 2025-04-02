@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
 
 .landingPageBody {
   background: no-repeat url(./assets/SitemapIndexed2.png);
@@ -14,8 +14,9 @@
 }
 
 .landingPage {
-  font-family: Pirata One;
+  font-family: New Rocker;
   font-size: 100px;
+  letter-spacing: 20px;
   margin-bottom: 40px;
   color: white;
 }

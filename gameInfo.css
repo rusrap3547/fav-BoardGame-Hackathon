@@ -18,7 +18,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 14px 300px;
+  padding: 0px 300px;
 }
 
 .navbar a {
@@ -34,7 +34,7 @@ a:hover {
   display: flex;
   list-style-type: none;
   gap: 20px;
-  font-size: 20px;
+  font-size: 10px;
   color: white;
 }
 
@@ -54,48 +54,51 @@ html,
 body {
   background: url(./assets/gameBackground.png);
   background-size: cover;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: white;
 }
 
-#board {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  width: 90vmin;
-  height: 90vmin;
-  border: 2px solid black;
+body {
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
-#board div {
-  border: 1px solid #ccc;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+h1 {
+  text-align: center;
 }
 
-#board div {
-  border: 1px solid #ccc;
+p,
+li,
+h3,
+h4,
+h5 {
+  text-align: center;
+  font-size: 20px;
 }
 
-/* Color all squares as grass (light green) */
-#board div {
-  background-color: lightgreen;
+h1,
+h3 {
+  color: Red;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
-/* Color a few squares as lake (light blue) */
-#board div:nth-child(33),
-#board div:nth-child(34),
-#board div:nth-child(43),
-#board div:nth-child(44) {
-  background-color: lightblue;
+hr {
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 3px double #ffffff;
+  color: red;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 1000px;
 }
 
-#board div:nth-child(57),
-#board div:nth-child(58),
-#board div:nth-child(67),
-#board div:nth-child(68) {
-  background-color: lightblue;
+hr::after {
+  background: #fff;
+  content: "§";
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
 }
