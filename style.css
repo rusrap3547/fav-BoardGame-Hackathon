@@ -67,6 +67,7 @@ body {
   width: 90vmin;
   height: 90vmin;
   border: 2px solid black;
+  margin-top: 80px;
 }
 
 #board div {
