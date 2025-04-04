@@ -18,7 +18,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 14px 300px;
+  padding: 14px 440px;
 }
 
 .navbar a {
@@ -50,7 +50,6 @@ a:hover {
 
 /* =============================================== */
 
-html,
 body {
   background: url(./assets/gameBackground.png);
   background-size: cover;
@@ -99,4 +98,24 @@ body {
 #board div:nth-child(67),
 #board div:nth-child(68) {
   background-color: lightblue;
+}
+
+#startGameButton {
+  float: right;
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  margin-right: 0px;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(220, 0, 0, 1);
+  position: absolute;
+  right: 300px;
+  bottom: 16px;
+}
+
+#startGameButton:hover {
+  background-color: rgba(255, 0, 0, 1);
 }

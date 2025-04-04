@@ -4,8 +4,6 @@
   background: no-repeat url(./assets/SitemapIndexed2.png);
   background-size: cover;
   background-position: center;
-  margin-top: 300px;
-  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,12 +11,31 @@
   text-align: center;
 }
 
-.landingPage {
+.landingPageTitle {
   font-family: New Rocker;
   font-size: 100px;
   letter-spacing: 20px;
   margin-bottom: 40px;
   color: white;
+  padding: 0;
+}
+
+.landingPageDesc,
+.landingPageDesc2,
+.credit,
+.developers {
+  font-size: 20px;
+  color: white;
+}
+
+.credit {
+  margin-top: 40px;
+  color: red;
+}
+
+.developers,
+.landingPageDesc2 {
+  margin-top: 0;
 }
 
 .landingPageButton {
@@ -27,8 +44,16 @@
   background-color: #16a085;
   border: none;
   border-radius: 8px;
+  margin-top: 50px;
 }
 
 .landingPageButton:hover {
   background-color: #00ffcc;
+}
+
+.developed {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
 }
