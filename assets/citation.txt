@@ -1,0 +1,20 @@
+A lot of times I dont like the thought of people worried about where I learn something, I pick up inforamtion quickly. But I wanted to cite my sources anyways. They are not official but its how I got the information.
+
+A lot of the ideas are from the concept of the card game "War". Very simply, is X greater than Y = which is a boolean, 
+
+Boolean = True, then Player wins.
+Boolean = False, then Enemy wins.
+
+Programming logic is really fun and it always comes down to a yes or no. Anything else is too much detail for a computer.
+
+First we'll cite the obvious: 
+W3schools (What is a document page is how I built most of this)
+Mozzilla Development Network
+Devslopes Mentors. (major help)
+
+Second I'll start going through the less obvious.
+Youtube, a lot of videos on how to build a game and logic of making something visual
+https://www.youtube.com/watch?v=kcJtWF4p-1U&ab_channel=RobertHewlett
+
+This video in particular I want to mention becuase it taught me the ways of building a custom selector and other functions that are needed.
+His channel was invaluable to me, and the fact that he doesn't have more than 500 subscribers is a crime. I made sure he had one more.

@@ -53,9 +53,41 @@ function isPositionOccupied(row, col) {
   return square && square.textContent !== "";
 }
 
-//#################################################################################################################
+// Function to place player pieces
 
-// Function to add player pieces
-function setPlayerFlag () {
-  const playerFlag = game
+function createPieceCard(piece) {
+  const card = document.createElement('div');
+  card.classList.add('piece-card');
+
+  card.innerHTML = `
+    <img src="${piece.playerImage}" alt="${piece.name}" class="piece-img">
+    <h2>${piece.name}</h2>
+    <p><strong>Rank:</strong> ${piece.rank}</p>
+    <p><strong>Moves:</strong> ${piece.moves}</p>
+    <p><strong>Quantity:</strong> ${piece.quantity}</p>
+  `;
+
+  return card;
 }
+
+const container = document.getElementById('piece-cards');
+container.appendChild(createPieceCard(Marshal));
+
+// Starting with the flag
+
+// let flagPlaced = false;
+
+// const squares = document.querySelectorAll(".square");
+// squares.forEach((square) => {
+//   square.addEventListener("click", () => {
+//     const row = document.querySelector("data-row");
+//     const col = document.querySelector("data-col");
+//     if (flagPlaced) {
+//       alert("Flag already placed!");
+//       return;
+//     }
+//     if (isPositionOccupied(row, col)) {
+//       alert("Position already occupied!");
+//       return;
+//     }
+//     const flag = 
