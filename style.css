@@ -119,3 +119,53 @@ body {
 #startGameButton:hover {
   background-color: rgba(255, 0, 0, 1);
 }
+
+
+/* ####################### */
+/* Combat card information */
+/* ####################### */
+
+.combat-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 3px solid #222;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 9999;
+  box-shadow: 0 0 10px #000;
+}
+
+.combat-card {
+  text-align: center;
+  width: 120px;
+  position: relative;
+}
+
+.combat-card img {
+  width: 60px;
+  margin-bottom: 8px;
+}
+
+.vs-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.combat-card .red-x {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  color: red;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
