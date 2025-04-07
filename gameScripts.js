@@ -1,6 +1,7 @@
 // Initialize board setup and start game
 window.onload = () => {
   const startGameButton = document.getElementById("startGameButton");
+  console.log("Starting game...");
   startGameButton.addEventListener("click", () => {
     resetBoard();
     generateEnemyPositions();
@@ -49,6 +50,9 @@ function placeEnemies() {
     }
   });
 }
+generateEnemyPositions();
+placeEnemies();
+
 // Function to check if a position is occupied
 function isPositionOccupied(row, col) {
   const square = document.querySelector(
