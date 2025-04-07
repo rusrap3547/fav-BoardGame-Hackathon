@@ -1,23 +1,31 @@
+// Initialize board setup and start game
+window.onload = () => {
+  const startGameButton = document.getElementById("startGameButton");
+  startGameButton.addEventListener("click", () => {
+    placeEnemies();
+    generateEnemyPositions();
+    console.log("Game has started");
+  });
+
+  console.log("Window loaded");
+};
+
 // Function to generate random enemy positions in the top 3 rows
 function generateEnemyPositions() {
   const enemyPositions = [];
-  for (let i = 0; i < 30; i++) {
-    let row = Math.floor(Math.random() * 3);
-    let col = Math.floor(Math.random() * 10);
-    const position = { row, col };
+  while (enemyPositions.length < 30) {
+    const row = Math.floor(Math.random() * 3);
+    const col = Math.floor(Math.random() * 10);
     if (!enemyPositions.some((p) => p.row === row && p.col === col)) {
-      enemyPositions.push(position);
-    } else {
-      i--; // go back if position is filled
+      enemyPositions.push({ row, col });
     }
   }
   return enemyPositions;
 }
-
 // Place enemies on the board
 function placeEnemies() {
   const enemyPositions = generateEnemyPositions();
-  enemyPositions.forEach((pos, index) => {
+  enemyPositions.forEach((pos) => {
     const square = document.querySelector(
       `#board div:nth-child(${pos.row * 10 + pos.col + 1})`
     );
@@ -28,23 +36,6 @@ function placeEnemies() {
     }
   });
 }
-
-const startGameButton = document.getElementById("startGameButton");
-startGameButton.addEventListener("click", (generateEnemyPositions, placeEnemies) => {
-  generateEnemyPositions();
-  placeEnemies();
-console.log("Game has started");
-}
-);
-
-
-// Initialize board setup
-window.onload = () => {
-  generateEnemyPositions();
-  placeEnemies();
-  console.log("Window loaded");
-};
-
 // Function to check if a position is occupied
 function isPositionOccupied(row, col) {
   const square = document.querySelector(
@@ -52,42 +43,30 @@ function isPositionOccupied(row, col) {
   );
   return square && square.textContent !== "";
 }
-
-// Function to place player pieces
-
-function createPieceCard(piece) {
-  const card = document.createElement('div');
-  card.classList.add('piece-card');
-
-  card.innerHTML = `
-    <img src="${piece.playerImage}" alt="${piece.name}" class="piece-img">
-    <h2>${piece.name}</h2>
-    <p><strong>Rank:</strong> ${piece.rank}</p>
-    <p><strong>Moves:</strong> ${piece.moves}</p>
-    <p><strong>Quantity:</strong> ${piece.quantity}</p>
-  `;
-
-  return card;
+function placePlayerPieces() {
+  const availableSpaces = [];
+  for (let row = 7; row <= 9; row++) {
+    for (let col = 0; col < 10; col++) {
+      if (!isPositionOccupied(row, col)) {
+        availableSpaces.push({ row, col });
+      }
+    }
+  }
+pieces.forEach(piece => {
+  let quantity = piece.quantity;
+  for (let i = 0; i < quantity; i++) {
+    if (availableSpaces.length > 0) {
+      const randomIndex = Math.floor(Math.random() * availableSpaces.length);
+      const { row, col } = availableSpaces.splice(randomIndex, 1)[0];
+      const square = document.querySelector(`#board div:nth-child(${row * 10 + col + 1})`);
+        square.innerHTML = `<img src="${piece.playerImage}" alt="${piece.name}">`;
+      }
+    }
+  });
+  console.log("Player pieces placed");
+  function isPositionOccupied(row, col) {
+    const square = document.querySelector(`#board div:nth-child(${row * 10 + col + 1})`);
+    return square && square.innerHTML !== "";
+  }
 }
-
-const container = document.getElementById('piece-cards');
-container.appendChild(createPieceCard(Marshal));
-
-// Starting with the flag
-
-// let flagPlaced = false;
-
-// const squares = document.querySelectorAll(".square");
-// squares.forEach((square) => {
-//   square.addEventListener("click", () => {
-//     const row = document.querySelector("data-row");
-//     const col = document.querySelector("data-col");
-//     if (flagPlaced) {
-//       alert("Flag already placed!");
-//       return;
-//     }
-//     if (isPositionOccupied(row, col)) {
-//       alert("Position already occupied!");
-//       return;
-//     }
-//     const flag = 
+placePlayerPieces();

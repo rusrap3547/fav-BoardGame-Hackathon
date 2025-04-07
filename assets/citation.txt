@@ -18,3 +18,10 @@ https://www.youtube.com/watch?v=kcJtWF4p-1U&ab_channel=RobertHewlett
 
 This video in particular I want to mention becuase it taught me the ways of building a custom selector and other functions that are needed.
 His channel was invaluable to me, and the fact that he doesn't have more than 500 subscribers is a crime. I made sure he had one more.
+
+next is the ability to create or rather use html that is within an element with what I think is DOM manipulation. 
+I have a video from Jon higger from a while back that showed me about DOM manipulation which gave me the idea to look up the JS "Element"
+That video also explained a key on the keyboard I had never used before, the Tilde, or squiggle next to Escape
+
+I'm pretty excited to say this is the inspiration for the combat popup that I hope will work as I see it.
+https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML - this also helped going through each property
