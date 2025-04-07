@@ -3,14 +3,25 @@ window.onload = () => {
   const startGameButton = document.getElementById("startGameButton");
   startGameButton.addEventListener("click", () => {
     resetBoard();
-    placeEnemies();
     generateEnemyPositions();
+    placeEnemies();
     placePlayerPieces();
     console.log("Game has started");
   });
 
   console.log("Window loaded");
 };
+
+// window.onload = () => {
+//   const restartButton = document.getElementById("restartButton");
+//   restartButton.addEventListener("click", () => {
+//     resetBoard();
+//     generateEnemyPositions();
+//     placeEnemies();
+//     placePlayerPieces();
+//     console.log("Game has restarted");
+//   });
+// }
 
 // Function to generate random enemy positions in the top 3 rows
 function generateEnemyPositions() {
