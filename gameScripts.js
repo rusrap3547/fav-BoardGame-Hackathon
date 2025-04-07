@@ -2,6 +2,7 @@
 window.onload = () => {
   const startGameButton = document.getElementById("startGameButton");
   startGameButton.addEventListener("click", () => {
+    resetBoard();
     placeEnemies();
     generateEnemyPositions();
     placePlayerPieces();
@@ -98,3 +99,11 @@ function makePiecesMovable() {
     });
   }
 makePiecesMovable();
+
+function resetBoard() {
+  const squares = document.querySelectorAll("#board div");
+  squares.forEach((square) => {
+    square.innerHTML = "";
+  });
+  console.log("Board reset");
+}
