@@ -120,6 +120,16 @@ body {
   background-color: rgba(255, 0, 0, 1);
 }
 
+#board img {
+  width: 50%;
+  height: 50%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: auto;
+  display: flex;
+}
+
 
 /* ####################### */
 /* Combat card information */

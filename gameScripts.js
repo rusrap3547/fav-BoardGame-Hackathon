@@ -52,17 +52,17 @@ function placePlayerPieces() {
       }
     }
   }
-pieces.forEach(piece => {
-  let quantity = piece.quantity;
-  for (let i = 0; i < quantity; i++) {
-    if (availableSpaces.length > 0) {
-      const randomIndex = Math.floor(Math.random() * availableSpaces.length);
-      const { row, col } = availableSpaces.splice(randomIndex, 1)[0];
-      const square = document.querySelector(`#board div:nth-child(${row * 10 + col + 1})`);
-        square.innerHTML = `<img src="${piece.playerImage}" alt="${piece.name}">`;
+  pieces.forEach(piece => {
+    let quantity = piece.quantity;
+    for (let i = 0; i < quantity; i++) {
+      if (availableSpaces.length > 0) {
+        const randomIndex = Math.floor(Math.random() * availableSpaces.length);
+        const { row, col } = availableSpaces.splice(randomIndex, 1)[0];
+        const square = document.querySelector(`#board div:nth-child(${row * 10 + col + 1})`);
+          square.innerHTML = `<img src="${piece.playerImage}" alt="${piece.name}">`;
+        }
       }
-    }
-  });
+    });
   console.log("Player pieces placed");
   function isPositionOccupied(row, col) {
     const square = document.querySelector(`#board div:nth-child(${row * 10 + col + 1})`);
