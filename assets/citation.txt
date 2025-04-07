@@ -25,3 +25,12 @@ That video also explained a key on the keyboard I had never used before, the Til
 
 I'm pretty excited to say this is the inspiration for the combat popup that I hope will work as I see it.
 https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML - this also helped going through each property
+
+creating the movement was the hardest part so I just started with google. 
+"how do you create a variable to wait for assign it a value"
+
+Luckily I found this stackoverflow article.
+https://stackoverflow.com/questions/3635924/how-can-i-make-a-program-wait-for-a-variable-change-in-javascript
+
+I also looked up how do you change something inside an html character, afterwards I found the .appendChild method, its used to
+make changes inside the html that is within the () of the method. This is different than the Node.append which is its own command.

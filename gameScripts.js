@@ -4,6 +4,7 @@ window.onload = () => {
   startGameButton.addEventListener("click", () => {
     placeEnemies();
     generateEnemyPositions();
+    placePlayerPieces();
     console.log("Game has started");
   });
 
@@ -70,3 +71,30 @@ function placePlayerPieces() {
   }
 }
 placePlayerPieces();
+
+let selectedPiece = null;
+
+function makePiecesMovable() {
+  const squares = document.querySelectorAll("#board div");
+  squares.forEach((square)=> {
+    square.addEventListener("click", ()=> {
+      if (selectedPiece) {
+        if (square.innerHTML === "") {
+          square.appendChild(selectedPiece);
+          selectedPiece = null;
+          console.log("Piece moved"); } 
+          else { 
+            console.log("Destination square is occupied:");
+          }
+        }
+          else if (square.innerHTML !== "") {
+            const piece = square.querySelector("img");
+            if (piece) {
+              selectedPiece = piece;
+              console.log('Selected piece:', selectedPiece)
+            }
+          }
+        });
+    });
+  }
+makePiecesMovable();
